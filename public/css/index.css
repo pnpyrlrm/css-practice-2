@@ -1,49 +1,10 @@
-.card {
+html {
+  max-width: 720px;
 }
 
-.card > p {
-  color: green;
-  -webkit-text-fill-color: red;
-  -webkit-text-stroke: 1px blue;
+body {
+  background: #fff;
 }
-
-p:focus,
-p:active,
-p:hover {
-  -webkit-text-fill-color: rgb(243, 243, 54);
-  -webkit-text-stroke: 1px rgb(255, 0, 132);
-
-  direction: rtl;
-}
-
-#test {
-  color: unset;
-  -webkit-text-fill-color: unset;
-  -webkit-text-stroke: unset;
-
-  text-align: justify;
-
-  letter-spacing: 0.01em;
-}
-
-span {
-  text-align: left;
-  text-transform: uppercase;
-
-  text-decoration: underline red;
-}
-
-span:hover {
-  text-decoration-line: line-through;
-  text-decoration-style: wavy;
-}
-
-pre {
-  tab-size: 3;
-  letter-spacing: 100%;
-}
-
-/* ============================================= */
 
 * {
   font-family: 'Roboto', Helvetica, sans-serif;
@@ -51,12 +12,4 @@ pre {
   font-weight: 900;
 
   font-display: swap;
-}
-
-span {
-  font-size: larger;
-
-  font-weight: lighter;
-
-  font-style: oblique;
 }
