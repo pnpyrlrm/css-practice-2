@@ -13,25 +13,14 @@
 </header>
 
 <main class="main">
-	{{#with messages}}
-	<div class="messages">
-		<h1 class="messages_title">{{title}}</h1>
-
-		{{#each list}}
-		<div class="msg">
-			<strong class="msg_name">{{name}}</strong>
-			<p class="msg_text">{{message}}</p>
-			<span class="msg_day">{{day}}</span>
-		</div>
-		{{/each}}
-
-		<a href="#" class="messages_link">All messages</a>
+	{{#with info}}
+	<div class="info">
+		<h1 class="info_title">{{title}}</h1>
+		<p class="info_text">{{description}}</p>
 	</div>
 	{{/with}}
 	{{#with form}}
 	<form class="form">
-		<h2 class="form_title">{{title}}</h2>
-
 		<div class="form_input_list">
 			{{#each inputs}}
 			<input type="{{type}}" placeholder="{{placeholder}}" class="form_input" name="{{name}}" id="{{id}}">
@@ -50,14 +39,36 @@
 	{{/with}}
 </main>
 
-<div class="advantages">
-	{{#each advantages}}
-	<div>
-		<strong>{{title}}</strong>
-		<p>{{text}}</p>
+{{#with updates}}
+<div class="updates">
+	<h2 class="upd_title">{{title}}</h2>
+	<div class="upd_list">
+		{{#each list}}
+		<div class="upd_icon">{{nickname.[0]}}</div>
+		<div class="upd_comments">
+			<h3 class="upd_name">{{nickname}}</h3>
+			<p class="upd_description">{{description}}</p>
+		</div>
+		{{/each}}
 	</div>
-	{{/each}}
+	<a href="{{show_all.url}}" class="upd_link">{{show_all.text}}</a>
 </div>
+{{/with}}
+
+{{#with expirience}}
+<div class="expirience">
+	<h2 class="exp_title">{{title}}</h2>
+	<span class="exp_badge">{{badge}}</span>
+	<div class="exp_list">
+		{{#each list}}
+		<div class="exp_card">
+			<h3 class="exp_name">{{name}}</h3>
+			<p class="exp_details">{{details}}</p>
+		</div>
+		{{/each}}
+	</div>
+</div>
+{{/with}}
 
 <footer>
 	<div class="footer">
