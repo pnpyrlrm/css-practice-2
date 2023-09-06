@@ -5,3 +5,8 @@ html {
 body {
   background: #fff;
 }
+
+* {
+  font-family: 'Roboto', sans-serif;
+  font-display: swap;
+}
